@@ -31,12 +31,10 @@ public class ShowFile {
 				i = fin.read();
 				if (i != -1) System.out.print((char) i);
 			} while (i != -1);
-		} catch (FileNotFoundException e) {
-			System.out.println("Файл ненайден.");
 		} catch (IOException e) {
-			System.out.println("Ошибка чтения из файла");
+			System.out.println("Ошибка ввода-вывода: " + e);
 		}finally {
-			//закрыть файл
+			//закрыть файл в любом случае
 			try {
 				if(fin !=null)fin.close();
 			} catch (IOException e) {
