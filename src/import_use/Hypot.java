@@ -1,6 +1,7 @@
 package import_use;
 
 import static java.lang.Math.*;
+import static java.lang.System.*;
 
 public class Hypot {
 	public static void main(String[] args) {
@@ -10,9 +11,9 @@ public class Hypot {
 		side2 = 4.;
 		
 		hypot = sqrt(pow(side1,2) + pow(side1,2));
-		System.out.println("При заданой длине сторон:");
-		System.out.println("side1 = " + side1);
-		System.out.println("side2 = " + side2);
-		System.out.println("Гипотенуза(hypot) = " + hypot);
+		out.println("При заданой длине сторон:");
+		out.println("side1 = " + side1);
+		out.println("side2 = " + side2);
+		out.println("Гипотенуза(hypot) = " + hypot);
 	}
 }
