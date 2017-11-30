@@ -3,6 +3,8 @@ package obobshenia;
 public class GenDemo {
 	public static void main(String[] args) {
 		Gen<Integer> iOb;
+		String str = "Welcome to Java world";
+		System.out.println(str);
 		
 		iOb = new Gen<Integer>(88);
 		
@@ -16,7 +18,7 @@ public class GenDemo {
 		
 		strOb.showType();
 		
-		String str = strOb.getOb();
-		System.out.println("str = " + str);
+		String str1 = strOb.getOb();
+		System.out.println("str = " + str1);
 	}
 }
