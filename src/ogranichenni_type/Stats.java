@@ -1,7 +1,6 @@
 package ogranichenni_type;
 
-//В этой версии класса Stats аргумент T должен быть
-//классом Number или наследуемым от него классом
+//Применение метасимвола
 public class Stats<T extends Number> {
 	T[] nums; //nums -  это массив значений типа T
 	
@@ -15,5 +14,12 @@ public class Stats<T extends Number> {
 			sum += num.doubleValue();   //Ошибка!!!
 		}
 		return sum / nums.length;
+	}
+	
+	boolean sameAvg(Stats<?> ob) {
+		if (average() == ob.average()) {
+			return true;
+		}
+		return false;
 	}
 }
