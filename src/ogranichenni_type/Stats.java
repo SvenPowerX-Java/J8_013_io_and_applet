@@ -1,11 +1,8 @@
 package ogranichenni_type;
 
-//Классоздать Stats - Пример безуспешной попытки создать
-//обобщённый класс для вычисления среднего значения
-//массива чисел заданного типа
-//
-//Этоот клас содержит ошибку
-public class Stats<T> {
+//В этой версии класса Stats аргумент T должен быть
+//классом Number или наследуемым от него классом
+public class Stats<T extends Number> {
 	T[] nums; //nums -  это массив значений типа T
 	
 	public Stats(T[] nums) {
@@ -13,9 +10,10 @@ public class Stats<T> {
 	}
 	double average(){
 		double sum = 0.0;
-		for (int i = 0; i < nums.length; i++) {
-//			sum += nums[i].doubleValue();   //Ошибка!!!
-			return sum / nums.length;
+		
+		for (T num : nums) {
+			sum += num.doubleValue();   //Ошибка!!!
 		}
+		return sum / nums.length;
 	}
 }
