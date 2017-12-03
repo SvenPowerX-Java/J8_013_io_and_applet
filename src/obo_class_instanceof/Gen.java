@@ -1,7 +1,7 @@
 package obo_class_instanceof;
 
 public class Gen<T> {
-	T ob;
+	protected T ob;
 	
 	public Gen(T ob) {
 		this.ob = ob;
